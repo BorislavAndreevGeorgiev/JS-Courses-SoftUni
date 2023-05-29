@@ -1,0 +1,11 @@
+function englishNameOfTheLastDigit(num){
+
+    let numAsString = String(num);
+    let lastChar = numAsString[numAsString.length - 1]
+    let lastCharAsNumber = Number (lastChar)
+    
+    let textNumbers = ["zero","one","two","three","four","five","six","seven","eight","nine"]
+
+    console.log(textNumbers[lastCharAsNumber]);
+
+}
