@@ -1,0 +1,28 @@
+body {
+    background-color:cornsilk;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+}
+p {
+    font-style: normal;
+}
+ul, ol {
+    font-style: italic;
+}
+.general{
+    font-style: italic;
+}
+p.general{
+    color:blue;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
