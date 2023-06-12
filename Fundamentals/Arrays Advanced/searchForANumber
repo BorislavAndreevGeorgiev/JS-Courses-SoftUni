@@ -1,0 +1,13 @@
+function searchForANumber(numbersArray, commandsArray) {
+
+    let numbersToTake = commandsArray[0];
+    let numbersToDelete = commandsArray[1];
+    let surchNumber = commandsArray[2];
+
+    let newArray = numbersArray.slice(0, numbersToTake);
+    newArray.splice(0, numbersToDelete);
+
+    let numberCounter = newArray.filter(el => el === surchNumber).length;
+
+    console.log(`Number ${surchNumber} occurs ${numberCounter} times.`);
+}
