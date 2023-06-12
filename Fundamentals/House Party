@@ -1,0 +1,30 @@
+function houseParty(data) {
+
+    let partyList = [];
+
+    for (const person of data) {
+
+        let details = person.split(' ');
+        let personName = details[0];
+
+        if (details.includes('not')) {
+
+            if (partyList.includes(personName)) {
+                let nameIndex = partyList.indexOf(personName);
+
+                if (nameIndex !== -1) {
+                    partyList.splice(nameIndex);
+                }
+            } else {
+                console.log(`${personName} is not in the list!`);
+            }
+        } else {
+            if (partyList.includes(personName)) {
+                console.log(`${personName} is already in the list!`);
+            } else {
+                partyList.push(personName);
+            }
+        }
+    }
+    partyList.forEach(person => console.log(person));
+}
