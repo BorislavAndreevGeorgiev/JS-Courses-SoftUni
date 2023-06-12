@@ -1,0 +1,12 @@
+function distinctArray(data){
+
+    let newArray = [];
+    
+    for (const number of data) {
+        if(!newArray.includes(number)){
+            newArray.push(number)
+        }
+      
+    }
+    console.log(newArray.join(' '));   
+}
