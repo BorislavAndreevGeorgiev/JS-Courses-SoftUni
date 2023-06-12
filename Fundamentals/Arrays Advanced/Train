@@ -1,0 +1,25 @@
+function train(input) {
+
+    let wagons = input[0].split(' ').map(Number);
+    let capacity = Number(input[1]);
+
+    for (let i = 2; i < input.length; i++) {
+        let command = input[i].split(' ');
+
+        if (command[0] === "Add") {
+            wagons.push(Number(command[1]))
+        } else {
+            let passengers = Number(command[0]);
+
+            for (let wagonCounter = 0; wagonCounter < wagons.length; wagonCounter++) {
+
+                if (capacity - wagons[wagonCounter] >= passengers) {
+                    wagons[wagonCounter] += passengers;
+                    break;
+                }
+            }
+        }
+
+    }
+    console.log(wagons.join(' '));
+}
