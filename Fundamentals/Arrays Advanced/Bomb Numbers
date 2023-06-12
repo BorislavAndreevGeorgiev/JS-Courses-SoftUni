@@ -1,0 +1,20 @@
+function bombNumbers(array, bomb) {
+
+    let bombNumber = bomb[0];
+    let power = bomb[1]
+
+    while(array.includes(bombNumber)) {
+        let index = array.indexOf(bombNumber);
+        let removedElements = power * 2 + 1;
+        let startIndex = index -power;
+
+        if(startIndex < 0){
+            removedElements +=startIndex;
+            startIndex = 0
+        }
+    array.splice(startIndex,removedElements);
+    }
+
+    console.log(array.reduce((a,b) => a + b, 0))
+
+}
